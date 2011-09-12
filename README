@@ -1,0 +1,15 @@
+PhoneGap plugin for Flurry Analytics (iOS) 
+==========================================
+
+Made this simple plugin for use in an internal iOS project. Now sharing with the world.
+Right Now it just supports two methods - logPageView() and logEvent(eventName)
+
+
+Usage
+=====
+
+Like any other PGPlugin drag it into your project, include flurryplugin.js file in your application, modify PhoneGap.plist to bind FlurryPlugin to com.phonegap.flurry namespace. And call plugins.flurry.logPageView() or plugins.flurry.logEvent(eventName) from your HTML5 Application.
+(Make sure you have added the Flurry library to your project and 'startSession' call in your AppDelegate)
+
+This code is completely dependent on the PhoneGap project, also hosted on
+GitHub ( github.com/phonegap/phonegap )
