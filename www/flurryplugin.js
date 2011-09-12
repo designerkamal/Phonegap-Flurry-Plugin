@@ -2,7 +2,7 @@ FlurryPlugin = function()
 {
     
 };
-FlurryPlugin.prototype.logVideoEvent = function()
+FlurryPlugin.prototype.logPageView = function()
 {
     PhoneGap.exec(null,null,"com.phonegap.flurry","logPageView");
 };
