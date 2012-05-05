@@ -2,20 +2,22 @@ FlurryPlugin = function()
 {
     
 };
-FlurryPlugin.prototype.logPageView = function()
+FlurryPlugin.prototype.pageView = function()
 {
-    PhoneGap.exec(null,null,"com.phonegap.flurry","logPageView");
+    cordova.exec(null,null,"FlurryPlugin","logPageView",[]);
 };
 FlurryPlugin.prototype.logEvent = function(name)
 {
-    PhoneGap.exec(null,null,"com.phonegap.flurry","logEvent",[name]);
+    cordova.exec(null,null,"FlurryPlugin","logEvent",[name]);
 };
 
-PhoneGap.addConstructor(function() 
-{
-    if(!window.plugins)
-    {
-        window.plugins = {};
-    }
-    window.plugins.flurry = new FlurryPlugin();
+cordova.addConstructor(function() {
+					   
+	/* shim to work in 1.5 and 1.6  */
+	if (!window.Cordova) {
+	window.Cordova = cordova;
+	};
+
+	if(!window.plugins) window.plugins = {};
+		window.plugins.FlurryPlugin = new FlurryPlugin();
 });
