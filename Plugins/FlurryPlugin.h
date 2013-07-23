@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 
-#ifdef PHONEGAP_FRAMEWORK
-#import <PhoneGap/PGPlugin.h>
+#ifdef CORDOVA_FRAMEWORK
+#import <Cordova/CDVPlugin.h>
 #else
-#import "PGPlugin.h"
+#import "CDVPlugin.h"
 #endif
 
-@interface FlurryPlugin:PGPlugin {
+@interface FlurryPlugin:CDVPlugin {
 }
 - (void)logPageView:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 - (void)logEvent:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;

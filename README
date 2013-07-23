@@ -4,6 +4,7 @@ PhoneGap plugin for Flurry Analytics (iOS)
 Made this simple plugin for use in an internal iOS project. Now sharing with the world.
 Right Now it just supports two methods - logPageView() and logEvent(eventName)
 
+@mdreeling : Both methods updated for and tested on Cordova 1.6.1
 
 Usage
 =====

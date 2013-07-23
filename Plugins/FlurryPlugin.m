@@ -13,11 +13,13 @@
 
 - (void)logEvent:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options  
 {
-    
+    NSLog(@"Logging event for %@",[arguments objectAtIndex:1]);
     [FlurryAnalytics logEvent:[arguments objectAtIndex:1]];
 }
 - (void)logPageView:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options  
 {
-    [FlurryAnalytics logEvent:[arguments objectAtIndex:1]];
+    NSLog(@"Logging pageView");
+    [FlurryAnalytics logPageView];
+	NSLog(@"PageView logged");
 }
 @end
